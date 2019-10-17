@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `My blog`,
-    description: `A blog about frontend development and other cool stuff`,
+    description: `A blog about backend development and other cool stuff`,
     author: `@myBlog`,
+    position: 'Backend Developer'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -24,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
