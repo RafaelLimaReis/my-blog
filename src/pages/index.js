@@ -8,22 +8,22 @@ import PostItem from '../components/PostItem';
 const IndexPage = () => {
   const { allMarkdownRemark } = useStaticQuery(graphql`
     query PostList {
-        allMarkdownRemark {
-        edges {
-            node {
-            frontmatter {
-                title
-                date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
-                description
-                category
-                background
+        allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                        date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+                        description
+                        category
+                        background
+                    }
+                    timeToRead,
+                    fields {
+                        slug    
+                    }
+                }
             }
-            timeToRead,
-            fields {
-                slug    
-            }
-            }
-        }
         }
     }  
   `);
